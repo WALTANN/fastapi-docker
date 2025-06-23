@@ -8,4 +8,10 @@ You can see 3 dir with any mcrservices. Build project (`docker-compose up --buil
 - `Users` - http://localhost:8001/docs (swagger)
 - `Prod` - http://localhost:8002/docs (swagger)
 
-It the swagger you can check services with post-orders 
+In the swagger you can check services with post-orders (pick try it out)
+
+other routes:
+
+http://localhost:8000/ring
+http://localhost:8001/king
+http://localhost:8002/hello
