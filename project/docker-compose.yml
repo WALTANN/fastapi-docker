@@ -1,0 +1,36 @@
+# docker-compose.yml
+version: '3.9'
+
+services:
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    env_file:
+      - ./auth/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./auth/app:/app/app
+
+  users:
+    build:
+      context: ./users
+      dockerfile: Dockerfile
+    env_file:
+      - ./users/.env
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./users/app:/app/app
+
+  zprod:
+    build:
+      context: ./zprod
+      dockerfile: Dockerfile
+    env_file:
+      - ./zprod/.env
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./zprod/app:/app/app
